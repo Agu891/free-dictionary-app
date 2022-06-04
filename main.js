@@ -19,36 +19,11 @@ form.addEventListener('submit', async (event)=>{
       
     } 
    
-    //    datos.flatMap((item) =>{
-    //   
-    //    const ul = document.createElement('ul')
-    //    const liDefinition1 = document.createElement('li')
-    //    const liDefinition2 = document.createElement('li')
-    //    const liDefinition3 = document.createElement('li')
-    //    const liPhonetics = document.createElement('li')
-    //    definition.appendChild(ul)
-    //    ul.appendChild(liDefinition1)
-    //    ul.appendChild(liDefinition2)
-    //    ul.appendChild(liDefinition3)
-    //    ul.appendChild(liPhonetics)
-    //       
-    //       
-    //if(item.meanings.length > 1 ){ 
-    //    
-    //   
-    //    liDefinition1.appendChild(document.createTextNode(  `-Meaning: ${item.meanings[0].definitions[0].definition}` )) 
-    //    liDefinition2.appendChild(document.createTextNode( `-Meaning: ${item.meanings[1].definitions[0].definition}` ))
-    //    liDefinition3.appendChild(document.createTextNode( `-Meaning: ${item.meanings[2].definitions[0].definition}` ))
-    //    liPhonetics.appendChild(document.createTextNode(`-Phonetics: ${item.phonetics[1].text}`))
-    //  } else{
-    //   
-    //   
-    //    liDefinition1.appendChild(document.createTextNode(  `-Definition: ${item.meanings[0].definitions[0].definition}` )) 
-    //       } 
     
     if(definition.hasChildNodes()){
         definition.removeChild(definition.firstChild)
-    }
+    } 
+    
     let ul = document.createElement('ul')
     let li = document.createElement('li')
     let li2 = document.createElement('li')
@@ -66,9 +41,7 @@ form.addEventListener('submit', async (event)=>{
     
     datos.flatMap((item) =>{
         
-        
-        //for(let i = 0; i < 5 ; i++)
-       if( item.meanings.length > 1){
+       if( item.meanings.length > 1 ){
            
            ul.appendChild(li)
            ul.appendChild(li2)
@@ -77,14 +50,12 @@ form.addEventListener('submit', async (event)=>{
            ul.appendChild(liDefinition2)
            ul.appendChild(liDefinition3)
            ul.appendChild(liPhonetics)
-           ul.appendChild(liPhoneticsAudio)
            li.appendChild(a)
     
            li.appendChild(document.createTextNode(` -Part of speech :${item.meanings[0].partOfSpeech}  ||Definition: ${item.meanings[0].definitions[0].definition} || Example: ${item.meanings[0].definitions[0].example}`))
            li2.appendChild(document.createTextNode(` -Part of speech :${item.meanings[1].partOfSpeech} ||Definition: ${item.meanings[1].definitions[0].definition}|| Example: ${item.meanings[1].definitions[0].example}`))
            li3.appendChild(document.createTextNode(` -Part of speech :${item.meanings[2].partOfSpeech} ||Definition: ${item.meanings[2].definitions[0].definition} || Example: ${item.meanings[2].definitions[0].example}`))
-           liDefinition1.appendChild(document.createTextNode(  `-Definition: ${item.meanings[1].definitions[0].definition} || Example: ${item.meanings[1].definitions[0].example}` )) 
-           liPhonetics.appendChild(document.createTextNode(`-Phonetics: ${item.phonetics[1].text}`))
+           liPhonetics.appendChild(document.createTextNode(`-Phonetics: ${item.phonetics[1].text}` ||`-Phonetics: ${item.phonetics[1].text}`))
            a.setAttribute("href", `${item.phonetics[1].audio}` )
            a.appendChild(button)
            button.appendChild(document.createTextNode("Audio"))
@@ -92,10 +63,29 @@ form.addEventListener('submit', async (event)=>{
 
            
            
-       } else  {
-           
        }
-    
+        else {
+        
+        ul.appendChild(li)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+        ul.appendChild(liDefinition1)
+        ul.appendChild(liDefinition2)
+        ul.appendChild(liDefinition3)
+        ul.appendChild(liPhonetics)
+        li.appendChild(a)
+ 
+        li.appendChild(document.createTextNode(` -Part of speech :${item.meanings[0].partOfSpeech}  ||Definition: ${item.meanings[0].definitions[0].definition} || Example: ${item.meanings[0].definitions[0].example}`))
+        liDefinition1.appendChild(document.createTextNode(  `-Definition: ${item.meanings[0].definitions[1].definition} || Example: ${item.meanings[0].definitions[1].example}` ))
+        liDefinition2.appendChild(document.createTextNode(  `-Definition: ${item.meanings[0].definitions[2].definition} || Example: ${item.meanings[0].definitions[2].example}` ))
+        liDefinition3.appendChild(document.createTextNode(  `-Definition: ${item.meanings[0].definitions[3].definition} || Example: ${item.meanings[0].definitions[3].example}` ))
+        liPhonetics.appendChild(document.createTextNode(`-Phonetics: ${item.phonetics[0].text}`))
+        a.setAttribute("href", `${item.phonetics[0].audio}` )
+        a.appendChild(button)
+        button.appendChild(document.createTextNode("Audio"))
+       
+       } 
+       
      
         } )
 

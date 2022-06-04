@@ -11,6 +11,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fontfamily);
+    font-weight: 600;
 }
 #boxgral{
     background-image: url(./Img/Papersheet.webp);
@@ -66,7 +68,7 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 1rem;
+    min-height: 1.5rem;
     height: 50%;
     margin-bottom: 1rem;
 }
@@ -85,6 +87,7 @@ button {
     width: 100%;
     margin-bottom: 1rem;
     min-height: 1.5rem;
+    
     
 }
 ul li{
