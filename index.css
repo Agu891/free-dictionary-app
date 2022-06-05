@@ -23,7 +23,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
+    
    border-radius: 25px;
    min-height: 25vh;
    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -39,11 +39,6 @@ h1{
     
 }
 
-#tituloPalabra{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #form{
        display: flex;
@@ -73,14 +68,7 @@ h1{
     margin-bottom: 1rem;
 }
 
-ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-}
+
 button {
     display: flex;
     justify-content: center;
@@ -90,12 +78,19 @@ button {
     
     
 }
+#audio{
+    margin: 1.5rem;
+    width: 15%;
+}
 ul li{
+    
  font-family:var(--fontfamily);
  font-weight: 600;
  width: 100%;
  margin-bottom: 1rem;
  margin-top: 1rem;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 p{
