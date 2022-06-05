@@ -44,7 +44,7 @@ form.addEventListener('submit', async (event)=>{
                  
                   definition.innerHTML += ` <ul><li> Word : ${word}
                                                <li> Phonetic : ${phonetics}
-                                               <li> Part of speech : ${partOfSpeech} </li>
+                                               <li> Word type : ${partOfSpeech} </li>
                                                <li> Definition: ${datos[i].meanings[j].definitions[k].definition} </li>
                                                <li> Examples : ${datos[i].meanings[j].definitions[k].example} </li> </ul>
                                                <a href="${audio}"><button id="audio">Audio</button><a/>`
