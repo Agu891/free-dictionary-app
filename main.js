@@ -43,7 +43,7 @@ form.addEventListener('submit', async (event)=>{
                  
                  
                   definition.innerHTML += ` <ul><li> Word : ${word}
-                                               <li> Phonetic : ${phonetics}
+                                               <li> Phonetic : ${phonetics} </li>
                                                <li> Word type : ${partOfSpeech} </li>
                                                <li> Definition: ${datos[i].meanings[j].definitions[k].definition} </li>
                                                <li> Examples : ${datos[i].meanings[j].definitions[k].example || 'No hay ejemplos disponibles'} </li> 
