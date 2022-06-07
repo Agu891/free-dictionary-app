@@ -42,6 +42,7 @@ form.addEventListener('submit', async (event)=>{
          }
   if(definition.innerHTML.length === 0){
       alert("La palabra que estas buscando no existe")
+      input.value = "" 
   }
     
 })
