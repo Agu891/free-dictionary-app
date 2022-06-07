@@ -78,10 +78,7 @@ button {
     
     
 }
-#audio{
-    margin: 1.5rem;
-    width: 15%;
-}
+
 ul li{
     
  font-family:var(--fontfamily);

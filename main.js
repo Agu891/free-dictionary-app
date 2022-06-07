@@ -2,7 +2,6 @@ const url = 'https://api.dictionaryapi.dev/api/v2/entries/en'
 const form = document.querySelector("#form")
 const definition = document.querySelector("#definition")
 const input = document.querySelector("#texto")
-
 let tituloPalabra = document.querySelector("#tituloPalabra")
 let significados = []
 
@@ -19,12 +18,6 @@ form.addEventListener('submit', async (event)=>{
         datos = palabras
       
     } 
-   
-    
-    
-    
-    
-   
     definition.innerHTML = ""
         
      for(let i= 0 ; i < datos.length; i++){
@@ -38,21 +31,12 @@ form.addEventListener('submit', async (event)=>{
             
             
             for(let k = 0; k < datos[i].meanings[j].definitions.length; k++ ){
-                 
-               
-                 
-                 
-                  definition.innerHTML += ` <ul><li> Word : ${word}
+                       definition.innerHTML += ` <ul><li> Word : ${word} </li>
                                                <li> Phonetic : ${phonetics} </li>
                                                <li> Word type : ${partOfSpeech} </li>
                                                <li> Definition: ${datos[i].meanings[j].definitions[k].definition} </li>
                                                <li> Examples : ${datos[i].meanings[j].definitions[k].example || 'No hay ejemplos disponibles'} </li> 
-                                               <li> ${audio ? `<a href="${audio}" ><button id="audioBtn">Audio</button><a/>`: "No hay audios disponibles"}</li></ul>` 
-                                               
-                  
-                                               
-                
-                
+                                               <li> ${audio ? `<a href="${audio}" ><button id="audioBtn">Audio</button><a/>`: "No hay audios disponibles"}</li></ul>`     
              }
          }
          }
