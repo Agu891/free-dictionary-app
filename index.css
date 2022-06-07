@@ -101,3 +101,6 @@ p{
     display:flex;
     min-width: 5rem;
 }
+#lastLi {
+    border-bottom: 2px solid black;
+}

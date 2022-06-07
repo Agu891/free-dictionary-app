@@ -36,7 +36,7 @@ form.addEventListener('submit', async (event)=>{
                                                <li> Word type : ${partOfSpeech} </li>
                                                <li> Definition: ${datos[i].meanings[j].definitions[k].definition} </li>
                                                <li> Examples : ${datos[i].meanings[j].definitions[k].example || 'No hay ejemplos disponibles'} </li> 
-                                               <li> ${audio ? `<a href="${audio}" ><button id="audioBtn">Audio</button><a/>`: "No hay audios disponibles"}</li></ul>`     
+                                               <li id="lastLi"> ${audio ? `<a href="${audio}" ><button id="audioBtn">Audio</button><a/>`: "No hay audios disponibles"}</li></ul>`     
              }
          }
          }
