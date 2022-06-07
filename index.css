@@ -99,3 +99,8 @@ p{
     margin: 15px;
     text-transform: uppercase;
 }
+
+#audioBtn {
+    display:flex;
+    min-width: 5rem;
+}
