@@ -2,7 +2,7 @@ const url = 'https://api.dictionaryapi.dev/api/v2/entries/en'
 const form = document.querySelector("#form")
 const definition = document.querySelector("#definition")
 const input = document.querySelector("#texto")
-const divSynonyms = document.querySelector("#divSynonyms")
+
 let tituloPalabra = document.querySelector("#tituloPalabra")
 let significados = []
 
