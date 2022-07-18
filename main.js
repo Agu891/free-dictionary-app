@@ -40,7 +40,7 @@ form.addEventListener("submit", async (event) => {
                                                } </li> 
                                                <li id="lastLi"> ${
                                                  audio
-                                                   ? `<audio src="${audio}" controls>Play me</audio>`
+                                                   ? `<audio src="${audio}" controls/>`
                                                    : "No hay audios disponibles"
                                                }</li></ul>`;
       }
