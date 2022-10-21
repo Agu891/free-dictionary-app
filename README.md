@@ -1,7 +1,7 @@
 # Free Dictionary App
 Dictionary with HTML, JS, and CSS.
 
-##Deployed  on vercel
+## Deployed  on vercel
 
 https://vercel.com/agu891/free-dictionary-app
 
